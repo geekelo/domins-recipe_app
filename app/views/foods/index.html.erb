@@ -1,0 +1,10 @@
+<h1>Your Food List</h1>
+<ul>
+  <% @foods.each do |food| %>
+    <li>
+      <%= food.name %> - <%= food.quantity %> <%= food.measurement_unit %> - $<%= food.price %>
+      <%= link_to 'Delete', food_path(food), method: :destroy, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Add New Food', new_food_path %>
