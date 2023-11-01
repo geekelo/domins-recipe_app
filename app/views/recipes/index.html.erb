@@ -1,0 +1,10 @@
+<h1>Your recipe List</h1>
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li>
+      <%= recipe.name %> -<%= recipe.description %>
+      <%= link_to 'Delete', recipe_path(recipe), method: :destroy, data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Add New recipe', new_recipe_path %>
