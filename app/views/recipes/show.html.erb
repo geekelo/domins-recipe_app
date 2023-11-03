@@ -1,0 +1,17 @@
+<h1><%= @recipe.name %></h1>
+<p>Preparation Time: <%= @recipe.preparation_time %></p>
+<p>Cooking Time: <%= @recipe.cooking_time %></p>
+<p>Description: <%= @recipe.description %></p>
+<%= link_to 'Add Ingredients', new_recipe_recipe_food_path(@recipe) %>
+<h2>Ingredients</h2>
+
+  <% @recipe.recipe_foods.each do |recipe_food| %>
+    <div>
+      <%= "#{recipe_food.food.name}: #{recipe_food.quantity} (Value: #{recipe_food.value})" %>
+      <%= link_to 'Edit', edit_recipe_recipe_food_path(@recipe, recipe_food) %>
+      <%= button_to 'Delete', recipe_recipe_food_path(@recipe, recipe_food), method: :delete %>
+      </div>
+  <% end %>
+
+
+  
