@@ -5,6 +5,15 @@ class RecipesController < ApplicationController
     @recipes = current_user.recipes
   end
 
+  def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update(recipe_params)
+      redirect_to @recipe, notice: 'Recipe updated successfully.'
+    else
+      render :edit
+    end
+  end
+
   def new
     @recipe = current_user.recipes.build
   end

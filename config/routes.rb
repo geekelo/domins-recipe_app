@@ -22,6 +22,15 @@ Rails.application.routes.draw do
   root "public_recipes#index"
 
   resources :recipes do
+
+    
     resources :recipe_foods
   end
+
+  resources :recipes do
+    member do
+      patch 'toggle_public'
+    end
+  end
+  
 end
