@@ -21,7 +21,6 @@ class FoodsController < ApplicationController
   def show
     @food = current_user.foods.find(params[:id])
   end
-  
 
   private
 
