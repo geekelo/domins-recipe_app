@@ -11,13 +11,35 @@
  
 
   <body>
-  <% if user_signed_in? %>
-    <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
+  <section class="maincont">
+  <nav>
+  <ul class="navcont">
+    <li><%= link_to 'Home', root_path, class: 'navlink' %></li>
+    <li><%= link_to 'Foods', foods_path, class: 'navlink' %></li>
+    <li><%= link_to 'Recipes', recipes_path, class: 'navlink' %></li>
+    <li><%= link_to 'Shopping list', general_shopping_lists_index_path, class: 'navlink' %></li>
+    <li><a class="navlink" href="javascript:history.back()">Go Back</a></li>
+
+    <li><% if user_signed_in? %>
+    <%= button_to 'Sign out | Logout', destroy_user_session_path, method: :delete, class: ['navlink', 'navbutton'] %>
   <% else %>
-    <%= link_to 'Sign up', new_user_registration_path %>
+  <li class="navbtn">  <%= link_to 'Sign up | Login', new_user_registration_path, class: ['navlink', 'navbutton'] %></li>
   <% end %>
+  </li>
+  </ul>
+  </nav>
+  <main>
+  <div class="logocont">
+  <%= image_tag 'logo.png', width: '190', alt: 'logo', class: 'logo', id: 'image-id' %>
+
+  </div>
+
+  <div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
+  <div
+  </main>
+  </section>
   </body>
 </html>
