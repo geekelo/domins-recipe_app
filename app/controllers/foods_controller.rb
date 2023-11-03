@@ -20,9 +20,8 @@ class FoodsController < ApplicationController
 
   def show
     @food = current_user.foods.find(params[:id])
-    @food.destroy
-    redirect_to foods_path, notice: 'Food item deleted successfully'
   end
+  
 
   private
 
