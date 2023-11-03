@@ -2,7 +2,13 @@
 <p>Preparation Time: <%= @recipe.preparation_time %></p>
 <p>Cooking Time: <%= @recipe.cooking_time %></p>
 <p>Description: <%= @recipe.description %></p>
+
 <%= link_to 'Add Ingredients', new_recipe_recipe_food_path(@recipe) %>
+<%= form_with(model: @recipe, url: recipe_path(@recipe), method: :patch) do |form| %>
+  <%= form.check_box :public %>
+  <%= form.submit "Toggle Public" %>
+<% end %>
+
 <h2>Ingredients</h2>
 
   <% @recipe.recipe_foods.each do |recipe_food| %>
