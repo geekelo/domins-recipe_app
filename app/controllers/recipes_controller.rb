@@ -19,6 +19,18 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @recipe = Recipe.find(params[:id])
+    @user = @recipe.user
+    @foods = @recipe.foods
+  end
+
+  def edit
+    @recipe = current_user.recipes.find(params[:id])
+    @recipe.destroy
+    redirect_to recipes_path, notice: 'Recipe item deleted successfully'
+  end
+
+  def destroy
     @recipe = current_user.recipes.find(params[:id])
     @recipe.destroy
     redirect_to recipes_path, notice: 'Recipe item deleted successfully'
