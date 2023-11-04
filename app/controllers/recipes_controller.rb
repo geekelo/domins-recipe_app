@@ -2,11 +2,11 @@ class RecipesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @recipes = current_user.recipes
+    @recipes = current_user.recipes.includes(:user)
   end
 
   def update
-    @recipe = Recipe.find(params[:id])
+    @recipe = current_user.recipes.find(params[:id])
     if @recipe.update(recipe_params)
       redirect_to @recipe, notice: 'Recipe updated successfully.'
     else
@@ -28,21 +28,17 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
-    @user = @recipe.user
-    @foods = @recipe.foods
+    @recipe = Recipe.includes(:user, :foods).find(params[:id])
   end
 
   def edit
     @recipe = current_user.recipes.find(params[:id])
-    @recipe.destroy
-    redirect_to recipes_path, notice: 'Recipe item deleted successfully'
   end
 
   def destroy
     @recipe = current_user.recipes.find(params[:id])
     @recipe.destroy
-    redirect_to recipes_path, notice: 'Recipe item deleted successfully'
+    redirect_to recipes_path, notice: 'Recipe item deleted successfully.'
   end
 
   private
