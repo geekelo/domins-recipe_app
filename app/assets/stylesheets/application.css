@@ -21,13 +21,17 @@
   padding: 0;
 }
 
+body {
+  background-image: url('bgimage.png');
+}
+
 .maincont {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: aqua;
+  background-color: rgba(0, 255, 255, 0);
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav {
@@ -45,13 +49,12 @@ nav {
 }
 
 main {
-  background-color: #eff3fc;
+  background-color: #eff3fc00;
   width:70%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 30%;
-  background-image: url('bgimage.png');
   padding: 0 3rem;
   padding-bottom: 3rem;
 }
@@ -63,6 +66,7 @@ li {
 
 a {
   text-decoration: none;
+  text-align: center;
 }
 
 .navcont {
@@ -131,11 +135,13 @@ h2 {
   margin-bottom: 2rem;
   padding: 3rem 0;
   border-radius: 1vh;
-  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   color: #33363f;
-  align-items: center;
+}
+
+.recipedescriptionCont {
+  padding-top: 0.8rem;
 }
 
 .publicRecipeName {
@@ -151,7 +157,7 @@ h2 {
   display: flex;
   flex: row;
   gap: 10px;
-  align-items: center;
+
 }
 
 .publicRecipeName:hover {
@@ -159,27 +165,28 @@ h2 {
 }
 
 /* Forms */
-
 form {
-  background-color: #395796;
+  border: 1px solid #33363f;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  color: #fff;
+  color: #33363f;
   font-size: 1.5rem;
   padding: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border-radius: 5%;
+  border-radius: 2rem;
   align-items: center;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  gap: 10px;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="number"] {
   width: 50vh;
   border: none;
   height: 2rem;
@@ -190,3 +197,80 @@ input:focus {
   border: none;
 }
 
+input[type="submit"] {
+  border: 2px solid #33363f;
+  background-color: #33363f;
+  color: #c1d0f1;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-family:'Montserrat', Times, serif;
+  
+}
+
+.authenticationlinks {
+  text-align: center;
+  text-decoration: underline;
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+}
+
+/* Foods */
+.table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #33363f;
+}
+
+.tableheader,
+.tablebody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tableheader {
+  background-color: #33363f;
+  color: #fff;
+}
+
+.tablecol {
+  width: 10%;
+  padding: 1rem;
+}
+
+.actbtn {
+  background-color: #fec601;
+  width: 30%;
+  box-shadow: none;
+  margin-left: 0%;
+}
+
+.actbtncenter {
+  background-color: #fec601;
+  width: 30%;
+  box-shadow: none;
+}
+
+.del {
+  width: 10%;
+  margin-left: 0%;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+form:has(button.recipesdelete) {
+  border-width: 0;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: #fec601;
+}
+
+.lefth2 {
+  text-align: left;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

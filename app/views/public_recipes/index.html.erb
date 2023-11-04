@@ -7,9 +7,9 @@
         <div><%= link_to recipe.name, public_recipe_path(recipe), class: 'publicRecipeName' %> <br> <i>by <%= recipe.user.name %></i></div>
       </div>
 
-      <div>
+      <div class="recipedescriptionCont">
         <p>Total food items: <%= recipe.recipe_foods.count %></p>
-        <p>Total price: <%= recipe.recipe_foods.sum { |rf| rf.quantity * rf.food.price } %></p>
+        <p>Total price: $<%= recipe.recipe_foods.sum { |rf| rf.quantity * rf.food.price } %></p>
       </div>
     </li>
   <% end %>

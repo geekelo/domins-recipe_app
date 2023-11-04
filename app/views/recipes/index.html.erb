@@ -1,11 +1,16 @@
-<h1>Your recipe List</h1>
-<ul>
+<h2>Your recipe List</h2>
+<%= link_to 'Add New recipe', new_recipe_path, class: ['navlink', 'actbtncenter'] %>
+<ul class="publicRecipeCont">
   <% @recipes.each do |recipe| %>
-    <li>
-      <%= link_to recipe.name, recipe_path(recipe)%> -<%= recipe.description %>
-      <%= button_to 'Delete Recipe', recipe, method: :delete %>
-      
+    <li class="publicRecipe">
+    <div>
+      <%= link_to recipe.name, recipe_path(recipe),  class: 'publicRecipeName' %>
+      <%= button_to 'Delete', recipe, class: 'recipesdelete', method: :delete %>
+    </div>
+    <div class="recipedescriptionCont">
+    <%= recipe.description %>
+    </div>  
     </li>
   <% end %>
 </ul>
-<%= link_to 'Add New recipe', new_recipe_path %>
+
