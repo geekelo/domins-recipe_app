@@ -34,6 +34,7 @@
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
+
 </details>
 
 <!-- Features -->
@@ -57,6 +58,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 - Ruby
+- Ruby on rails
 - VS code (any code editor of your choice)
 
 ### Setup
@@ -64,7 +66,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  git clone https://github.com/Bleu-Yves-Sopoude/socialize.git
+  git clone https://github.com/geekelo/domins-recipe_app.git
 ```
 
 ### Usage
@@ -72,7 +74,7 @@ Clone this repository to your desired folder:
 To run the project, execute the following command:
 
 ```sh
-  ruby socialize.rb
+  rails s domins-recipe_app.rb
 ```
 
 <!-- AUTHORS -->
