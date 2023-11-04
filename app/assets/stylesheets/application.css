@@ -258,6 +258,12 @@ input[type="submit"] {
   margin-top: 5px;
 }
 
+.makepublicform form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+
 form:has(button.recipesdelete) {
   border-width: 0;
   margin: 0;
@@ -265,9 +271,40 @@ form:has(button.recipesdelete) {
   background-color: #fec601;
 }
 
+form:has(button.recipedel2),
+.recipedel2 {
+  background-color: #395796;
+  padding: 0.2rem 1rem;
+  color: #fff;
+  border-width: 0;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+.recipedel2 {
+  padding: 0.4rem 0.5rem;
+}
+
+.tablecolactioncont {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .lefth2 {
   text-align: left;
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.recipepagesectioncont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.generate_add_sections {
+  display: flex;
+  justify-content: flex-start;
 }
