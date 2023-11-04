@@ -258,6 +258,12 @@ input[type="submit"] {
   margin-top: 5px;
 }
 
+.makepublicform form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+
 form:has(button.recipesdelete) {
   border-width: 0;
   margin: 0;
@@ -270,7 +276,6 @@ form:has(button.recipedel2),
   background-color: #395796;
   padding: 0.2rem 1rem;
   color: #fff;
-  border-radius: 0;
   border-width: 0;
   font-size: 0.8rem;
   border-radius: 6px;
@@ -284,12 +289,6 @@ form:has(button.recipedel2),
   display: flex;
   flex-direction: column;
   gap: 2px;
-}
-
-.makepublicform form {
-  display: flex;
-  flex-direction: column;
-  margin-left: 0;
 }
 
 .lefth2 {
