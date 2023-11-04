@@ -1,0 +1,8 @@
+<!-- views/recipes/show_foods.html.erb -->
+<h1>Foods Associated with Recipe <%= @recipe.name %></h1>
+
+<ul>
+  <% @foods.each do |food| %>
+    <li><%= food.name %></li>
+  <% end %>
+</ul>

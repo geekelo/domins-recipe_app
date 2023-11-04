@@ -1,0 +1,20 @@
+<h2><%= @recipe.name %></h2>
+<p>Preparation Time: <%= @recipe.preparation_time %></p>
+<p>Cooking Time: <%= @recipe.cooking_time %></p>
+<p>Description: <%= @recipe.description %></p>
+
+<h2 class="lefth2">Ingredients</h2>
+<ul class="table">
+<li class="tableheader">
+<span class="tablecol">Foods</span>
+<span class="tablecol">Quantity</span>
+<span class="tablecol">Value</span>
+</li>
+  <% @recipe.recipe_foods.each do |recipe_food| %>
+    <li class="tablebody">
+    <span class="tablecol"><%= recipe_food.food.name %></span>
+    <span class="tablecol"><%= recipe_food.quantity %><%= recipe_food.food.measurement_unit %></span>
+    <span class="tablecol">$<%= recipe_food.value %></span>
+    </li>
+  <% end %>
+</ul>

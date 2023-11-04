@@ -1,0 +1,45 @@
+<h2><%= @recipe.name %></h2>
+<section class="recipepagesectioncont">
+<div>
+<p>Preparation Time: <%= @recipe.preparation_time %></p>
+<p>Cooking Time: <%= @recipe.cooking_time %></p>
+<p>Description: <%= @recipe.description %></p>
+</div>
+
+<div class="makepublicform">
+<%= form_with(model: @recipe, url: recipe_path(@recipe), method: :patch) do |form| %>
+  <span>Toggle Public</span>
+  <%= form.check_box :public %>
+  <%= form.submit "Save" %>
+<% end %>
+</div>
+</section>
+
+<h2 class="lefth2">Ingredients</h2>
+<div class="generate_add_sections">
+<%= link_to 'Generate General Shopping List', general_shopping_lists_index_path, class: ['navlink', 'actbtn'] %>
+
+<%= link_to 'Add Ingredients', new_recipe_recipe_food_path(@recipe), class: ['navlink', 'actbtn'] %>
+</div>
+
+<ul class="table">
+<li class="tableheader">
+<span class="tablecol">Foods</span>
+<span class="tablecol">Quantity</span>
+<span class="tablecol">Value ($)</span>
+<span class="tablecol">Action</span>
+</li>
+  <% @recipe.recipe_foods.each do |recipe_food| %>
+    <li class="tablebody">
+    <span class="tablecol"><%= "#{recipe_food.food.name}" %></span>
+    <span class="tablecol"><%= "#{recipe_food.quantity}" %></span>
+    <span class="tablecol"><%= "#{recipe_food.value}" %></span>
+    <span class="tablecol tablecolactioncont">
+    <%= link_to 'Edit', edit_recipe_recipe_food_path(@recipe, recipe_food), class: 'recipedel2' %>
+    <%= button_to 'Delete', recipe_recipe_food_path(@recipe, recipe_food), class: 'recipedel2', method: :delete %>
+    </span>  
+    </li>
+  <% end %>
+
+
+  

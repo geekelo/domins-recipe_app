@@ -1,0 +1,21 @@
+<h2>Your Food List</h2>
+
+<%= link_to 'Add New Food', new_food_path, class: ['navlink', 'actbtn'] %>
+<ul class="table">
+  <li class="tableheader">
+    <span class="tablecol">Foods</span>
+    <span class="tablecol">Measurement Unit</span>
+    <span class="tablecol">Unit Price</span>
+    <span class="tablecol">Actions</span>
+  </li>
+  <% @foods.each do |food| %>
+    <li class="tablebody">
+      <%= content_tag :span, food.name, class: 'tablecol' %> 
+      <span class="tablecol"><%= food.quantity %>
+      <%= food.measurement_unit %></span> 
+      <span class="tablecol">$<%= food.price %></span>
+      <%= link_to 'Delete', food_path(food), method: :delete, class: ['tablecol', 'navlink', 'actbtn', 'del'] , data: { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
+

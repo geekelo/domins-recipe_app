@@ -1,0 +1,19 @@
+<h2>General Shopping List</h2>
+
+<ul class="table">
+<li class="tableheader">
+<span class="tablecol">Foods</span>
+<span class="tablecol">Total Quantity</span>
+<span class="tablecol">Total Value</span>
+</li>
+  <% @recipe_foods.each do |recipe_food| %>
+    <li class="tablebody">
+      <span class="tablecol"><%= recipe_food.name %></span>
+      <span class="tablecol"><%= recipe_food.total_quantity %></span>
+      <span class="tablecol"><%= recipe_food.total_value %></span>
+    </li>
+  <% end %>
+</ul>
+<br>
+<p>Total Foods to Buy: <%= @recipe_foods.size %></p>
+<p>Total Value: <%= @recipe_foods.sum { |rf| rf.total_value.to_i } %></p>

@@ -1,0 +1,19 @@
+<h2>Add a New Recipe Item</h2>
+<%= form_with(model: @recipe, url: recipes_path) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :preparation_time %>
+  <%= form.text_field :preparation_time %>
+
+  <%= form.label :cooking_time %>
+  <%= form.text_field :cooking_time %>
+
+  <%= form.label :description %>
+  <%= form.text_field :description %>
+
+  <%= form.label :public %>
+  <%= form.check_box :public %>
+
+  <%= form.submit 'Add Recipe' %>
+<% end %>
