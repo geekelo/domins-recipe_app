@@ -82,6 +82,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: domins_recipe_app_production
   username: domins_recipe_app
   password: <%= ENV["DOMINS_RECIPE_APP_DATABASE_PASSWORD"] %>
