@@ -7,6 +7,9 @@
 - [domins-recipe\_app](#domins-recipe_app)
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 domins-recipe\_app ](#-domins-recipe_app-)
+  - [Deployment](#deployment)
+    - [LIVE DEMO](#live-demo)
+    - [Video Presentation](#video-presentation)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -24,6 +27,12 @@
 # 📖 domins-recipe_app <a name="about-project"></a>
 
 **domins-recipe_app**  keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
+
+## 🛠 Deployment <a name="deployment"></a>
+### 🛠 Live Demo <a name="live-demo"></a>
+[LIVE DEMO](https://domins-recipe-app.onrender.com/)
+### 🛠 Video Presentation <a name="video-presentation"></a>
+[LIVE DEMO](https://domins-recipe-app.onrender.com/)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -83,16 +92,11 @@ To run the project, execute the following command:
 
 👤 **Author**
 
-👤 **Bleu Yves Sopoude (MrBlue)**
-
-- GitHub: [@Bleu-Yves-Sopoude](https://github.com/Bleu-Yves-Sopoude)
-- Linkedin: [@in/bleu-yves](https://www.linkedin.com/in/bleu-yves/)
-- GitHub: [@bleuYves](https://twitter.com/bleuYves)
-
 👤 **Eloghene Otiede (geekelo)**
 - GitHub: [@githubhandle](https://github.com/geekelo)
 - Twitter: [@twitterhandle](https://twitter.com/geekelo_xyz)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/eloghene-otiede)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
