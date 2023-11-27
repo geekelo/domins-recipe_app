@@ -24,6 +24,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
+
+![Screenshot from 2023-11-05 17-38-03](https://github.com/geekelo/domins-recipe_app/assets/102464578/54d442dd-015d-49e6-b576-fe0ec55e60aa)
+
 # 📖 domins-recipe_app <a name="about-project"></a>
 
 **domins-recipe_app**  keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
