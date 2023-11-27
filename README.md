@@ -1,4 +1,4 @@
-# domins-recipe_app
+# Domins Recipe App
 
 <a name="readme-top"></a>
 
@@ -29,7 +29,7 @@
 
 # 📖 domins-recipe_app <a name="about-project"></a>
 
-**domins-recipe_app**  keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
+**Domins Recipe App**  keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
 ##  💻 Deployment <a name="deployment"></a>
 ### Live Demo <a name="live-demo"></a>
