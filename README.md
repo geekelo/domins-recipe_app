@@ -93,7 +93,6 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author**
 
 👤 **Eloghene Otiede (geekelo)**
 - GitHub: [@githubhandle](https://github.com/geekelo)
