@@ -1,6 +1,5 @@
 
-  <img src="https://geekelo.com.ng/wp-content/uploads/2023/12/project-signature.gif" alt="signature" width=""  height="auto" />
-# Domins Recipe App
+  <img src="https://geekelo.com.ng/wp-content/uploads/2023/12/Brown-Black-Geometric-Personal-Branding-LinkedIn-Banner-1.png" alt="signature" >
 
 <a name="readme-top"></a>
 
